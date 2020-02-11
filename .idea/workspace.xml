@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="818b7e8c-44c2-4e3b-a0fe-a594b60ddba3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/validadores.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validadores.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/validadores_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/validadores_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validadores.iml" beforeDir="false" afterPath="$PROJECT_DIR$/validadores.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Validador.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Validador.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581456394074</updated>
-      <workItem from="1581456395545" duration="879000" />
+      <workItem from="1581456395545" duration="1429000" />
     </task>
     <servers />
   </component>

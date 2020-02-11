@@ -56,7 +56,7 @@ class Validador {
     return this;
   }
 
-  List<String> valido(String valor,{clearNoNumber=false}) {
+    String valido(String valor,{clearNoNumber=false}) {
     bool isNotNull = (valor != null);
 
     if(clearNoNumber){
@@ -137,7 +137,7 @@ class Validador {
     });
 
     if (_erros.length > 0) {
-      return _erros;
+      return _erros.toString();
     }
 
     return null;
