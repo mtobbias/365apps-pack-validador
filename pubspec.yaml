@@ -1,8 +1,8 @@
 name: validadores
 description: Validadores PT-BR.
 version: 0.0.1
-author: Marcelo Tobias https://github.com/mtobbias
-homepage:
+author: Marcelo Tobias <marcelo.tobbias@gmail.com>
+homepage: https://github.com/mtobbias/365apps-pack-validador
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
