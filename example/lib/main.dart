@@ -27,7 +27,6 @@ class MalidadoresMain extends StatelessWidget {
                 TextFormField(
                   validator: (value) {
                     // Aqui entram as validações
-
                     return Validador()
                         .add(Validar.CPF, msg: 'CPF Inválido')
                         .add(Validar.OBRIGATORIO, msg: 'Campo obrigatório')
