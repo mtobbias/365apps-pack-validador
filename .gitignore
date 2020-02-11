@@ -5,3 +5,7 @@
 .pub/
 
 build/
+.idea
+.metadata
+.packages
+validadores.iml
