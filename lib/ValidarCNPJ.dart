@@ -24,25 +24,25 @@ class CNPJ {
         numeros.split('').map((String d) => int.parse(d)).toList();
 
     // Calcular o primeiro dígito verificador
-    var calc_dv1 = 0;
+    var calcDv1 = 0;
     var j = 0;
     for (var i in Iterable<int>.generate(12, (i) => i < 4 ? 5 - i : 13 - i)) {
-      calc_dv1 += digitos[j++] * i;
+      calcDv1 += digitos[j++] * i;
     }
-    calc_dv1 %= 11;
-    var dv1 = calc_dv1 < 2 ? 0 : 11 - calc_dv1;
+    calcDv1 %= 11;
+    var dv1 = calcDv1 < 2 ? 0 : 11 - calcDv1;
 
     // Testar o primeiro dígito verificado
     if (digitos[12] != dv1) return false;
 
     // Calcular o segundo dígito verificador
-    var calc_dv2 = 0;
+    var calcDv2 = 0;
     j = 0;
     for (var i in Iterable<int>.generate(13, (i) => i < 5 ? 6 - i : 14 - i)) {
-      calc_dv2 += digitos[j++] * i;
+      calcDv2 += digitos[j++] * i;
     }
-    calc_dv2 %= 11;
-    var dv2 = calc_dv2 < 2 ? 0 : 11 - calc_dv2;
+    calcDv2 %= 11;
+    var dv2 = calcDv2 < 2 ? 0 : 11 - calcDv2;
 
     // Testar o segundo dígito verificador
     if (digitos[13] != dv2) return false;
