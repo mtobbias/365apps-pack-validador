@@ -8,18 +8,18 @@ class Validador {
   Map<Validar, String> _lista = Map();
   List<String> _erros = List();
 
-  int _minLength = null;
-  String _minLengthMsg = null;
-  int _maxLength = null;
-  String _maxLengthMsg = null;
+  int _minLength ;
+  String _minLengthMsg ;
+  int _maxLength ;
+  String _maxLengthMsg ;
 
-  int _minVal = null;
-  String _minValMsg = null;
-  int _maxVal = null;
-  String _maxValMsg = null;
+  int _minVal ;
+  String _minValMsg ;
+  int _maxVal ;
+  String _maxValMsg ;
 
-  String _equals = null;
-  String _equalsMsg = null;
+  String _equals ;
+  String _equalsMsg ;
 
   Validador equals(String value, {String msg = "Campo Inválido"}) {
     this._equals = value;

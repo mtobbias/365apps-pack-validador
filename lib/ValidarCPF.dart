@@ -1,9 +1,8 @@
-/**
- * Validador original 
- * autor: Thiago P. Martinez
- * git: https://github.com/thiagopereiramartinez
- * https://github.com/thiagopereiramartinez/dart-cpfcnpj/blob/master/lib/src/cpf.dart
- */
+/// Validador original 
+/// autor: Thiago P. Martinez
+/// git: https://github.com/thiagopereiramartinez
+///  https://github.com/thiagopereiramartinez/dart-cpfcnpj/blob/master/lib/src/cpf.dart
+ 
 
 
 class CPF {
