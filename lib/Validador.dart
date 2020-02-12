@@ -8,18 +8,18 @@ class Validador {
   Map<Validar, String> _lista = Map();
   List<String> _erros = List();
 
-  int _minLength ;
-  String _minLengthMsg ;
-  int _maxLength ;
-  String _maxLengthMsg ;
+  int _minLength;
+  String _minLengthMsg;
+  int _maxLength;
+  String _maxLengthMsg;
 
-  int _minVal ;
-  String _minValMsg ;
-  int _maxVal ;
-  String _maxValMsg ;
+  int _minVal;
+  String _minValMsg;
+  int _maxVal;
+  String _maxValMsg;
 
-  String _equals ;
-  String _equalsMsg ;
+  String _equals;
+  String _equalsMsg;
 
   Validador equals(String value, {String msg = "Campo Inválido"}) {
     this._equals = value;
@@ -56,10 +56,10 @@ class Validador {
     return this;
   }
 
-    String valido(String valor,{clearNoNumber=false}) {
+  String valido(String valor, {clearNoNumber = false}) {
     bool isNotNull = (valor != null);
 
-    if(clearNoNumber){
+    if (clearNoNumber) {
       valor = valor.replaceAll(RegExp(r'[^0-9]'), '');
     }
 

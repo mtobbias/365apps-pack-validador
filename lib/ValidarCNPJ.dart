@@ -1,11 +1,9 @@
-///Validador original 
+///Validador original
 /// autor: Thiago P. Martinez
 /// git: https://github.com/thiagopereiramartinez
 /// https://github.com/thiagopereiramartinez/dart-cpfcnpj/blob/master/lib/src/cnpj.dart
- 
 
 class CNPJ {
-
   // Validar número de CNPJ
   static bool isValid(String cnpj) {
     if (cnpj == null) return false;

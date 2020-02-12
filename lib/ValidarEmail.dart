@@ -1,7 +1,7 @@
-/// Validador original 
+/// Validador original
 /// autor: Fredrik Eilertsen
 /// git: https://github.com/fredeil
-///  https://github.com/fredeil/email-validator.dart/blob/master/lib/email_validator.dart 
+///  https://github.com/fredeil/email-validator.dart/blob/master/lib/email_validator.dart
 
 import 'dart:core';
 
@@ -100,7 +100,8 @@ class EmailValidator {
 
     _index++;
 
-    while (_index < text.length && _isDomain(text[_index], allowInternational)) {
+    while (
+        _index < text.length && _isDomain(text[_index], allowInternational)) {
       _index++;
     }
 
