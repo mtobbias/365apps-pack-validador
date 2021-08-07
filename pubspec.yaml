@@ -6,6 +6,7 @@ homepage: https://github.com/mtobbias/365apps-pack-validador
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
+  flutter: ">=1.12.0"
 
 dependencies:
   flutter:
@@ -14,6 +15,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  test: ^1.16.8
 
 flutter:
   plugin:

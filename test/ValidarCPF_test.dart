@@ -2,50 +2,50 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:validadores/Validador.dart';
 
 class _Contants {
-  static final TEST_NAME = "CPF";
-  static final DEFAULT_MESSAGE_INVALID = "Campo Inválido";
-  static final VALID_VALUE = "99988877714";
-  static final INVALID_VALUE = "99988877713";
-  static final INVALID_VALUE_00 = "00000000000";
-  static final INVALID_VALUE_INC = "999888777";
-  static final INVALID_VALUE_NULL = null;
+  static final testeName = "CPF";
+  static final defaultMessageInvalid = "Campo Inválido";
+  static final validValue = "99988877714";
+  static final invalidValue = "99988877713";
+  static final invalidValue00 = "00000000000";
+  static final invalidValueInc = "999888777";
+  static final invalidValueNull = null;
 
 }
   void main() {
 
-    test(_Contants.TEST_NAME + ' INVALID_VALUE_INC', () {
+    test(_Contants.testeName + ' invalidValueInc', () {
       var validador = Validador().add(
-          Validar.CPF, msg: _Contants.DEFAULT_MESSAGE_INVALID);
-      expect(_getDefaultResp(), validador.valido(_Contants.INVALID_VALUE_NULL));
+          Validar.CPF, msg: _Contants.defaultMessageInvalid);
+      expect(_getDefaultResp(), validador.valido(_Contants.invalidValueNull));
     });
 
-    test(_Contants.TEST_NAME + ' INVALID_VALUE_INC', () {
+    test(_Contants.testeName + ' invalidValueInc', () {
       var validador = Validador().add(
-          Validar.CPF, msg: _Contants.DEFAULT_MESSAGE_INVALID);
-      expect(_getDefaultResp(), validador.valido(_Contants.INVALID_VALUE_INC));
+          Validar.CPF, msg: _Contants.defaultMessageInvalid);
+      expect(_getDefaultResp(), validador.valido(_Contants.invalidValueInc));
     });
 
-    test(_Contants.TEST_NAME + ' INVALID_VALUE_00', () {
+    test(_Contants.testeName + ' invalidValue00', () {
       var validador = Validador().add(
-          Validar.CPF, msg: _Contants.DEFAULT_MESSAGE_INVALID);
-      expect(_getDefaultResp(), validador.valido(_Contants.INVALID_VALUE_00));
+          Validar.CPF, msg: _Contants.defaultMessageInvalid);
+      expect(_getDefaultResp(), validador.valido(_Contants.invalidValue00));
     });
 
-    test(_Contants.TEST_NAME + ' VALIDO', () {
+    test(_Contants.testeName + ' VALIDO', () {
       var validador = Validador().add(
-          Validar.CPF, msg: _Contants.DEFAULT_MESSAGE_INVALID);
-      expect(null, validador.valido(_Contants.VALID_VALUE));
+          Validar.CPF, msg: _Contants.defaultMessageInvalid);
+      expect(null, validador.valido(_Contants.validValue));
     });
 
-    test(_Contants.TEST_NAME + ' INVALIDO', () {
+    test(_Contants.testeName + ' INVALIDO', () {
       var validador = Validador().add(
-          Validar.CPF, msg: _Contants.DEFAULT_MESSAGE_INVALID);
-      expect(_getDefaultResp(), validador.valido(_Contants.INVALID_VALUE));
+          Validar.CPF, msg: _Contants.defaultMessageInvalid);
+      expect(_getDefaultResp(), validador.valido(_Contants.invalidValue));
     });
   }
 
   _getDefaultResp() {
-    return List.from({_Contants.DEFAULT_MESSAGE_INVALID}).toString().toString();
+    return List.from({_Contants.defaultMessageInvalid}).toString().toString();
   }
 
 
