@@ -5,7 +5,7 @@
 
 class CNPJ {
   // Validar número de CNPJ
-  static bool isValid(String cnpj) {
+  static bool isValid(String? cnpj) {
     if (cnpj == null) return false;
 
     // Obter somente os números do CNPJ

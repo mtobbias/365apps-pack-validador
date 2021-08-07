@@ -5,7 +5,7 @@
 
 class CPF {
   // Validar número de CPF
-  static bool isValid(String cpf) {
+  static bool isValid(String? cpf) {
     if (cpf == null) return false;
 
     // Obter somente os números do CPF
