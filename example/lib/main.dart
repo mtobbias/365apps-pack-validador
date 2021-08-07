@@ -41,7 +41,7 @@ class MalidadoresMain extends StatelessWidget {
                     labelText: 'CPF'
                   ),
                 ),
-        RaisedButton(
+        ElevatedButton(
           onPressed: () {
             if (_formKey.currentState!.validate()) {
               print('Valido');
