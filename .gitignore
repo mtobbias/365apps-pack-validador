@@ -12,6 +12,12 @@ validadores.iml
 
 pubspec.lock
 .*.iml
-.idea
+.idea/
 android
 macos
+build/
+ios
+ios/
+.metadata
+.packages
+pubspec.lock
