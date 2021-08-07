@@ -8,7 +8,7 @@ class Validador {
   static const DEFAULT_MESSAGE ="Campo Inválido";
 
   Map<Validar, String> _lista = Map();
-  List<String?> _erros = List.empty();
+  List<String?> _erros = [];
 
   int? _minLength;
   String? _minLengthMsg;
@@ -56,6 +56,10 @@ class Validador {
   Validador add(Validar v, {String msg = DEFAULT_MESSAGE}) {
     this._lista[v] = msg;
     return this;
+  }
+
+  String? validar(String? valor, {clearNoNumber = false}) {
+      return this.valido(valor,clearNoNumber: clearNoNumber);
   }
 
   String? valido(String? valor, {clearNoNumber = false}) {
