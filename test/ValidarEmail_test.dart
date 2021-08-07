@@ -9,6 +9,7 @@ class _Constants {
   static final VALID_VALUE_BR = "contato@registro.br";
   static final VALID_VALUE_COM_BR = "contato@365apps.com.br";
   static final INVALID_VALUE = "marcelo.tobbias@gmail";
+  static final INVALID_VALUE_NULL = null;
 }
 
 
@@ -36,6 +37,11 @@ void main(){
   test(_Constants.TEST_NAME +' INVALIDO', () {
     var validador = Validador().add(Validar.EMAIL, msg: _Constants.DEFAULT_MESSAGE_INVALID);
     expect(List.from({_Constants.DEFAULT_MESSAGE_INVALID}).toString(),validador.valido(_Constants.INVALID_VALUE));
+  });
+
+  test(_Constants.TEST_NAME +' INVALIDO', () {
+    var validador = Validador().add(Validar.EMAIL, msg: _Constants.DEFAULT_MESSAGE_INVALID);
+    expect(List.from({_Constants.DEFAULT_MESSAGE_INVALID}).toString(),validador.valido(_Constants.INVALID_VALUE_NULL));
   });
 
 }

@@ -291,19 +291,12 @@ class EmailValidator {
     _index = 0;
 
     if (email == null) {
-      throw ArgumentError('email');
+      return false;
     }
 
     if (email.isEmpty || email.length >= 255) {
       return false;
     }
-
-    // Local-part = Dot-string / Quoted-string
-    //       ; MAY be case-sensitive
-    //
-    // Dot-string = Atom *("." Atom)
-    //
-    // Quoted-string = DQUOTE *qcontent DQUOTE
     if (email[_index] == '"') {
       if (!_skipQuoted(email, allowInternational) || _index >= email.length) {
         return false;
