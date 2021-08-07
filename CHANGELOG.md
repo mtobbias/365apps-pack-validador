@@ -9,3 +9,6 @@ release
 
 ## 1.0.2
 fix Health suggestions
+
+## 1.0.3
+fix nullsafe

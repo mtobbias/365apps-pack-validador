@@ -8,7 +8,7 @@ Este projeto tem como objetivo principal aplicação de estudos Flutter, e colab
 
 ```
 dependencies:
-  validadores: ^0.0.1
+  validadores: ^1.0.3
 ```
 
 
