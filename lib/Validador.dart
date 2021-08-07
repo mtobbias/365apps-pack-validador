@@ -2,7 +2,7 @@ import 'ValidarCNPJ.dart';
 import 'ValidarCPF.dart';
 import 'ValidarEmail.dart';
 
-enum Validar { CPF, CNPJ, OBRIGATORIO, EMAIL }
+enum Validar { CPF, CNPJ, OBRIGATORIO, EMAIL, OBRIGATORIO_SE_NULO }
 
 class Validador {
   static const DEFAULT_MESSAGE ="Campo Inválido";
@@ -58,25 +58,35 @@ class Validador {
     return this;
   }
 
-  String? validar(String? valor, {clearNoNumber = false}) {
-      return this.valido(valor,clearNoNumber: clearNoNumber);
+  String? validar(String? valor, {clearNoNumber = false, seNulo}) {
+      return this.valido(valor,clearNoNumber: clearNoNumber,  seNulo: seNulo );
   }
 
-  String? valido(String? valor, {clearNoNumber = false}) {
+  String? valido(String? valor, {clearNoNumber = false, seNulo }) {
     bool isNotNull = (valor != null);
 
     if (clearNoNumber) {
       valor = valor!.replaceAll(RegExp(r'[^0-9]'), '');
     }
 
+
+
     //Validar valor
-    if (this._equals != null) {
-      if (!isNotNull || valor != this._equals) {
-        _erros.add(this._equalsMsg);
+
+    if(!_lista.values.contains(Validar.OBRIGATORIO_SE_NULO)){
+      if (this._equals != null) {
+        if (!isNotNull || valor != this._equals) {
+          _erros.add(this._equalsMsg);
+        }
       }
     }
 
+
+
+
+
     //Validar valor minimo
+
     if (this._minVal != null) {
       try {
         if (!isNotNull || int.parse(valor!) < this._minVal!) {
@@ -115,9 +125,19 @@ class Validador {
     _lista.forEach((validar, msg) {
       switch (validar) {
         case Validar.OBRIGATORIO:
+
           if (!isNotNull || valor!.trim().isEmpty) {
             _erros.add(msg);
           }
+          break;
+
+        case Validar.OBRIGATORIO_SE_NULO :
+          if (seNulo==null) {
+            if (!isNotNull || valor!.trim().isEmpty) {
+              _erros.add(msg);
+            }
+          }
+
           break;
         case Validar.CPF:
           if (!CPF.isValid(valor)) {
