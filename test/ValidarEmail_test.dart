@@ -3,13 +3,13 @@ import 'package:validadores/Validador.dart';
 
 
 class _Constants {
-  static final TEST_NAME ="EMAIL";
-  static final DEFAULT_MESSAGE_INVALID ="Campo Inválido";
-  static final VALID_VALUE = "marcelo.tobbias@gmail.com";
-  static final VALID_VALUE_BR = "contato@registro.br";
-  static final VALID_VALUE_COM_BR = "contato@365apps.com.br";
-  static final INVALID_VALUE = "marcelo.tobbias@gmail";
-  static final INVALID_VALUE_NULL = null;
+  static final testName ="EMAIL";
+  static final defaultMessageInvalid ="Campo Inválido";
+  static final validValue = "marcelo.tobbias@gmail.com";
+  static final validValueBr = "contato@registro.br";
+  static final validValueComBr = "contato@365apps.com.br";
+  static final invalidValue = "marcelo.tobbias@gmail";
+  static final invalidValueNull = null;
 }
 
 
@@ -18,30 +18,30 @@ void main(){
   /**
    *  @see https://github.com/mtobbias/365apps-pack-validador/issues/1
    */
-  test(_Constants.TEST_NAME +' VALIDO_COM_BR', () {
-    var validador = Validador().add(Validar.EMAIL, msg: _Constants.DEFAULT_MESSAGE_INVALID);
-    expect(null,validador.valido(_Constants.VALID_VALUE_COM_BR));
+  test(_Constants.testName +' VALIDO_COM_BR', () {
+    var validador = Validador().add(Validar.EMAIL, msg: _Constants.defaultMessageInvalid);
+    expect(null,validador.valido(_Constants.validValueComBr));
   });
 
-  test(_Constants.TEST_NAME +' VALIDO_BR', () {
-    var validador = Validador().add(Validar.EMAIL, msg: _Constants.DEFAULT_MESSAGE_INVALID);
-    expect(null,validador.valido(_Constants.VALID_VALUE_BR));
+  test(_Constants.testName +' VALIDO_BR', () {
+    var validador = Validador().add(Validar.EMAIL, msg: _Constants.defaultMessageInvalid);
+    expect(null,validador.valido(_Constants.validValueBr));
   });
 
 
-  test(_Constants.TEST_NAME +' VALIDO', () {
-    var validador = Validador().add(Validar.EMAIL, msg: _Constants.DEFAULT_MESSAGE_INVALID);
-    expect(null,validador.valido(_Constants.VALID_VALUE));
+  test(_Constants.testName +' VALIDO', () {
+    var validador = Validador().add(Validar.EMAIL, msg: _Constants.defaultMessageInvalid);
+    expect(null,validador.valido(_Constants.validValue));
   });
 
-  test(_Constants.TEST_NAME +' INVALIDO', () {
-    var validador = Validador().add(Validar.EMAIL, msg: _Constants.DEFAULT_MESSAGE_INVALID);
-    expect(List.from({_Constants.DEFAULT_MESSAGE_INVALID}).toString(),validador.valido(_Constants.INVALID_VALUE));
+  test(_Constants.testName +' INVALIDO', () {
+    var validador = Validador().add(Validar.EMAIL, msg: _Constants.defaultMessageInvalid);
+    expect(List.from({_Constants.defaultMessageInvalid}).toString(),validador.valido(_Constants.invalidValue));
   });
 
-  test(_Constants.TEST_NAME +' INVALIDO', () {
-    var validador = Validador().add(Validar.EMAIL, msg: _Constants.DEFAULT_MESSAGE_INVALID);
-    expect(List.from({_Constants.DEFAULT_MESSAGE_INVALID}).toString(),validador.valido(_Constants.INVALID_VALUE_NULL));
+  test(_Constants.testName +' INVALIDO', () {
+    var validador = Validador().add(Validar.EMAIL, msg: _Constants.defaultMessageInvalid);
+    expect(List.from({_Constants.defaultMessageInvalid}).toString(),validador.valido(_Constants.invalidValueNull));
   });
 
 }

@@ -1,11 +1,12 @@
 name: validadores
 description: Validadores para formulários PT-BR, validações como CPF,CNPJ,OBRIGATORIO,EMAIL,IGUAL,Valor Mínimo,Valor Máximo,Tamanho Mínimo,Tamanho Máximo.
-version: 1.0.3
+version: 1.0.4
 #author: Marcelo Tobias <marcelo.tobbias@gmail.com>
 homepage: https://github.com/mtobbias/365apps-pack-validador
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
+  flutter: ">=1.12.0"
 
 dependencies:
   flutter:
@@ -14,6 +15,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  test: ^1.16.8
 
 flutter:
   plugin:
