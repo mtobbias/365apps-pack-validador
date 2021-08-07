@@ -5,8 +5,10 @@ import 'ValidarEmail.dart';
 enum Validar { CPF, CNPJ, OBRIGATORIO, EMAIL }
 
 class Validador {
+  static const DEFAULT_MESSAGE ="Campo Inválido";
+
   Map<Validar, String> _lista = Map();
-  List<String?> _erros =List.empty();
+  List<String?> _erros = List.empty();
 
   int? _minLength;
   String? _minLengthMsg;
@@ -21,37 +23,37 @@ class Validador {
   String? _equals;
   String? _equalsMsg;
 
-  Validador equals(String value, {String msg = "Campo Inválido"}) {
+  Validador equals(String value, {String msg = DEFAULT_MESSAGE}) {
     this._equals = value;
     this._equalsMsg = msg;
     return this;
   }
 
-  Validador maxVal(int max, {String msg = "Campo Inválido"}) {
+  Validador maxVal(int max, {String msg = DEFAULT_MESSAGE}) {
     this._maxValMsg = msg;
     this._maxVal = max;
     return this;
   }
 
-  Validador minVal(int min, {String msg = "Campo Inválido"}) {
+  Validador minVal(int min, {String msg = DEFAULT_MESSAGE}) {
     this._minValMsg = msg;
     this._minVal = min;
     return this;
   }
 
-  Validador maxLength(int max, {String msg = "Campo Inválido"}) {
+  Validador maxLength(int max, {String msg = DEFAULT_MESSAGE}) {
     this._maxLengthMsg = msg;
     this._maxLength = max;
     return this;
   }
 
-  Validador minLength(int min, {String msg = "Campo Inválido"}) {
+  Validador minLength(int min, {String msg = DEFAULT_MESSAGE}) {
     this._minLengthMsg = msg;
     this._minLength = min;
     return this;
   }
 
-  Validador add(Validar v, {String msg = "Campo Inválido"}) {
+  Validador add(Validar v, {String msg = DEFAULT_MESSAGE}) {
     this._lista[v] = msg;
     return this;
   }
