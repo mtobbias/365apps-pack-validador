@@ -9,3 +9,9 @@ build/
 .metadata
 .packages
 validadores.iml
+
+pubspec.lock
+.*.iml
+.idea
+android
+macos
