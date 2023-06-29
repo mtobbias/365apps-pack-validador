@@ -8,7 +8,7 @@ Este projeto tem como objetivo principal aplicação de estudos Flutter, e colab
 
 ```
 dependencies:
-  validadores: ^1.0.5
+  validadores: ^1.0.6
 ```
 
 
@@ -29,7 +29,7 @@ Validador()
 
 ```dart
 
-            TextFormField(
+            @TextFormField(
                   validator: (value) {
                     // Aqui entram as validações
                     return Validador()
