@@ -27,6 +27,7 @@ class Validador {
   bool? _isBool;
   String? _isBoolMsg;
 
+  //https://github.com/mtobbias/365apps-pack-validador/issues/10
   Validador isTrue(bool boolValue, {String msg = DEFAULT_MESSAGE}) {
     this._isBool = boolValue;
     this._isBoolMsg = msg;
