@@ -1,3 +1,4 @@
+
 import 'ValidarCNPJ.dart';
 import 'ValidarCPF.dart';
 import 'ValidarEmail.dart';
@@ -23,6 +24,14 @@ class Validador {
   String? _equals;
   String? _equalsMsg;
 
+  bool? _isBool;
+  String? _isBoolMsg;
+
+  Validador isTrue(bool boolValue, {String msg = DEFAULT_MESSAGE}) {
+    this._isBool = boolValue;
+    this._isBoolMsg = msg;
+    return this;
+  }
   Validador equals(String value, {String msg = DEFAULT_MESSAGE}) {
     this._equals = value;
     this._equalsMsg = msg;
@@ -69,10 +78,6 @@ class Validador {
       valor = valor!.replaceAll(RegExp(r'[^0-9]'), '');
     }
 
-
-
-    //Validar valor
-
     if(!_lista.values.contains(Validar.OBRIGATORIO_SE_NULO)){
       if (this._equals != null) {
         if (!isNotNull || valor != this._equals) {
@@ -80,12 +85,6 @@ class Validador {
         }
       }
     }
-
-
-
-
-
-    //Validar valor minimo
 
     if (this._minVal != null) {
       try {
@@ -97,7 +96,6 @@ class Validador {
       }
     }
 
-    //Validar valor max
     if (this._maxVal != null) {
       try {
         if (!isNotNull || int.parse(valor!) > this._maxVal!) {
@@ -108,24 +106,29 @@ class Validador {
       }
     }
 
-    //Validar quantidade minima de caracters
     if (this._minLength != null) {
       if (!isNotNull || valor!.length < this._minLength!) {
         _erros.add(this._minLengthMsg);
       }
     }
 
-    //Validar quantidade máxima de caracters
     if (this._maxLength != null) {
       if (!isNotNull || valor!.length > this._maxLength!) {
         _erros.add(this._maxLengthMsg);
       }
     }
 
+    if (this._isBool != null) {
+      if (!isNotNull || !this._isBool!) {
+        _erros.add(this._isBoolMsg);
+      }
+    }
+
+
     _lista.forEach((validar, msg) {
       switch (validar) {
-        case Validar.OBRIGATORIO:
 
+        case Validar.OBRIGATORIO:
           if (!isNotNull || valor!.trim().isEmpty) {
             _erros.add(msg);
           }
@@ -157,7 +160,6 @@ class Validador {
             _erros.add(msg);
           }
           break;
-
         default:
       }
     });

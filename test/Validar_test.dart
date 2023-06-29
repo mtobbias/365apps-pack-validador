@@ -39,10 +39,7 @@ void main() {
           Validar.OBRIGATORIO_SE_NULO, msg: _Contants.defaultMessageInvalid);
       expect(_getDefaultResp(), validador.valido(_Contants.valorInvalido, seNulo: _Contants.valorInvalido));
     });
-
-
 }
-
   _getDefaultResp() {
     return List.from({_Contants.defaultMessageInvalid}).toString().toString();
   }

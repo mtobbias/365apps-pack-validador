@@ -1,8 +1,9 @@
-/// Validador original
-/// autor: Fredrik Eilertsen
-/// git: https://github.com/fredeil
-///  https://github.com/fredeil/email-validator.dart/blob/master/lib/email_validator.dart
-
+/*
+Validador original
+autor: Fredrik Eilertsen
+git: https://github.com/fredeil
+https://github.com/fredeil/email-validator.dart/blob/master/lib/email_validator.dart
+ */
 import 'dart:core';
 
 enum type { None, Alphabetic, Numeric, AlphaNumeric }

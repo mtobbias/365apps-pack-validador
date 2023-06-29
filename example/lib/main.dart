@@ -1,10 +1,11 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:validadores/Validador.dart';
 
 void main() => runApp(MalidadoresMain());
 
 class MalidadoresMain extends StatelessWidget {
-
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,7 @@ class MalidadoresMain extends StatelessWidget {
                 ),
         ElevatedButton(
           onPressed: () {
-            if (_formKey.currentState.validate()) {
+            if (_formKey.currentState!.validate()) {
               print('Valido');
             }
           },
