@@ -13,5 +13,5 @@ fix Health suggestions
 ## 1.0.3
 fix nullsafe
 
-## 1.0.6
+## 1.0.7
 add isBool
