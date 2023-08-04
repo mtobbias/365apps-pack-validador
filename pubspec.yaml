@@ -17,14 +17,3 @@ dev_dependencies:
     sdk: flutter
   test: ^1.16.8
 
-flutter:
-  plugin:
-    platforms:
-      android:
-        package: br.com.u365apps.pack.validadores.validadores
-        pluginClass: ValidadoresPlugin
-      ios:
-        pluginClass: ValidadoresPlugin
-      macos:
-        pluginClass: ValidadoresPlugin
-
