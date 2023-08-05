@@ -1,7 +1,10 @@
 name: validadores
 description: Validadores para formulários PT-BR, validações como CPF,CNPJ,OBRIGATORIO,EMAIL,IGUAL,Valor Mínimo,Valor Máximo,Tamanho Mínimo,Tamanho Máximo.
-version: 1.0.7
-#author: Marcelo Tobias <marcelo.tobbias@gmail.com>
+version: 1.0.9
+author: Marcelo Tobias <marcelo.tobbias@gmail.com>
+collaborators:
+  - Guilherme Nepomuceno de Carvalho <guilhermenepomuceno46@gmail.com>
+
 homepage: https://github.com/mtobbias/365apps-pack-validador
 
 environment:

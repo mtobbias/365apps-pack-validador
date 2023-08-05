@@ -15,3 +15,10 @@ fix nullsafe
 
 ## 1.0.7
 add isBool
+
+## 1.0.8
+fix 
+
+## 1.0.9
+- update changelog
+- update example

@@ -1,65 +1,16 @@
-# Validador (PT-BR)
+# example
 
+A new Flutter project.
 
-Este projeto tem como objetivo principal aplicação de estudos Flutter, e colaborar com a comunidade.
+## Getting Started
 
+This project is a starting point for a Flutter application.
 
-### Instalação
+A few resources to get you started if this is your first Flutter project:
 
-```
-dependencies:
-  validadores: ^0.0.1
-```
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-
-
-#Exemplo de utilização.
-
-```dart    
-
-Validador()
-     .add(Validar.CPF, msg: 'CPF Inválido')
-     .add(Validar.OBRIGATORIO, msg: 'Campo obrigatório')
-     .minLength(11)
-     .maxLength(11)
-     .valido(value,clearNoNumber: true);`
-   
-```
-
-
-```dart
-
-            TextFormField(
-                  validator: (value) {
-                    // Aqui entram as validações
-                    return Validador()
-                        .add(Validar.CPF, msg: 'CPF Inválido')
-                        .add(Validar.OBRIGATORIO, msg: 'Campo obrigatório')
-                        .minLength(11)
-                        .maxLength(11)
-                        .valido(value,clearNoNumber: true);
-
-                  },
-                  decoration: InputDecoration(
-                    helperText: 'informe seu cpf',
-                    hintText: '123.456.789-00',
-                    labelText: 'CPF'
-                  ),
-                ),
-
-```
-
-### Validadores
-
-- CPF
-- CNPJ
-- OBRIGATORIO
-- EMAIL
-- IGUAL
-- Valor Mínimo
-- Valor Máximo
-- Tamanho Mínimo
-- Tamanho Máximo
-  
-     
-     
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

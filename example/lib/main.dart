@@ -1,5 +1,3 @@
-import 'dart:js_interop';
-
 import 'package:flutter/material.dart';
 import 'package:validadores/Validador.dart';
 
@@ -22,36 +20,36 @@ class MalidadoresMain extends StatelessWidget {
         body: Form(
           key: _formKey,
           child: Container(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              children: <Widget>[
-                TextFormField(
-                  validator: (value) {
-                    // Aqui entram as validações
-                    return Validador()
-                        .add(Validar.CPF, msg: 'CPF Inválido')
-                        .add(Validar.OBRIGATORIO, msg: 'Campo obrigatório')
-                        .minLength(11)
-                        .maxLength(11)
-                        .valido(value,clearNoNumber: true);
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: <Widget>[
+                  TextFormField(
+                    validator: (value) {
+                      // Aqui entram as validações
+                      return Validador()
+                          .add(Validar.CPF, msg: 'CPF Inválido')
+                          .add(Validar.OBRIGATORIO, msg: 'Campo obrigatório')
+                          .minLength(11)
+                          .maxLength(11)
+                          .valido(value,clearNoNumber: true);
 
-                  },
-                  decoration: InputDecoration(
-                    helperText: 'informe seu cpf',
-                    hintText: '123.456.789-00',
-                    labelText: 'CPF'
+                    },
+                    decoration: const InputDecoration(
+                        helperText: 'informe seu cpf',
+                        hintText: '123.456.789-00',
+                        labelText: 'CPF'
+                    ),
                   ),
-                ),
-        ElevatedButton(
-          onPressed: () {
-            if (_formKey.currentState!.validate()) {
-              print('Valido');
-            }
-          },
-          child: Text('Enviar'),
-        )
-              ],
-            )
+                  ElevatedButton(
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        print('Valido');
+                      }
+                    },
+                    child: Text('Enviar'),
+                  )
+                ],
+              )
           ),
         ),
       )
